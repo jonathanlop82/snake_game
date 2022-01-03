@@ -1,6 +1,11 @@
 from turtle import Screen, Turtle
 import time
 
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
+
 
 class Snake:
 
@@ -30,15 +35,19 @@ class Snake:
         self.segment[0].forward(20)
 
     def move_left(self):
-        self.segment[0].setheading(180)
+        if self.segment[0].heading() != RIGHT:
+            self.segment[0].setheading(LEFT)
 
     def move_right(self):
-        self.segment[0].setheading(0)
+        if self.segment[0].heading() != LEFT:
+            self.segment[0].setheading(RIGHT)
 
     def move_up(self):
-        self.segment[0].setheading(90)
+        if self.segment[0].heading() != DOWN:
+            self.segment[0].setheading(UP)
 
     def move_down(self):
-        self.segment[0].setheading(270)
+        if self.segment[0].heading() != UP:
+            self.segment[0].setheading(DOWN)
 
 
