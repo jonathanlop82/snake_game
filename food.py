@@ -13,5 +13,5 @@ class Food(Turtle):
         self.set_position()
 
     def set_position(self):
-        self.goto(random.randint(-14,14) * 20, random.randint(-14,14) * 20)
+        self.goto(random.randint(-13,13) * 20, random.randint(-13,13) * 20)
 

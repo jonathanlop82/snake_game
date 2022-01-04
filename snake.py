@@ -50,5 +50,13 @@ class Snake:
         if self.segment[0].heading() != UP:
             self.segment[0].setheading(DOWN)
 
+    def grow_snake(self):
+        self.segment.append(Turtle(shape="square"))
+        self.segment[-1].penup()
+        self.segment[-1].goto(self.segment[-2].position())
+        self.segment[-1].color("white")
+        self.size += 1
+
+
 
 
