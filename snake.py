@@ -51,3 +51,4 @@ class Snake:
             self.segment[0].setheading(DOWN)
 
 
+
