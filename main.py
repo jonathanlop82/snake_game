@@ -40,13 +40,17 @@ while game_is_on:
 
 
     if player.segment[0].xcor() >= 280 or player.segment[0].xcor() <= -280 or player.segment[0].ycor() >= 280 or player.segment[0].ycor() <= -280:
-        game_is_on = False
-        score.game_over()
+        # game_is_on = False
+        # score.game_over()
+        score.reset()
+        player.reset()
 
     for seg in player.segment[1:]: #slice the list
         if player.segment[0].distance(seg) < 10:
-            game_is_on = False
-            score.game_over()
+            # game_is_on = False
+            # score.game_over()
+            score.reset()
+            player.reset()
 
 
 
